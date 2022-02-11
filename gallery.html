@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF=8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Book Shop</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="Index.html"> Home</a></li>
+          <li><a href="AboutUs.html"> About us </a></li>
+          <li><a href="contact-us.html"> Contact us </a></li>
+          <li><a href="gallery.html"> Gallery </a></li>
+          <li><a href="signup.html"> Register </a></li>
+          <li><a href="login.html"> Login </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="page-title">
+      <h2>Gallery</h2>
+    </div>
+
+    <br />
+    <div class="images">
+      <div class="image">
+        <img src="./img/2.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/3.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/26.jpg" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/5.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/6.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/7.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/8.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/9.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/10.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/11.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/12.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/13.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/14.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/15.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/16.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/22.jpg" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/23.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/25.jpg" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/20.png" style="width: 100%;" />
+      </div>
+      <div class="image">
+        <img src="./img/4.png" style="width: 100%;" />
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+
+<footer class="footer">
+  <div class="footer-p1">
+    <h3>Book-Shop</h3>
+    </div>
+  </div>
+
+    <div class="footer-p2">
+    <h5>Contact Us</h5>
+      <p>+383 043/123-456</p>
+        <a href="book-shop@gmail.com"
+          >
+          book-shop@gmail.com
+        </a>
+    </div>
+  <div class="footer-p3">
+    <h5>About Us</h5>
+    <p class="footer-company-about">
+      Ne jemi nje kompani e krijuar ne vitin 2019 , qellimi yne eshte te
+      promovojm sa me shume libra
+    </p>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
